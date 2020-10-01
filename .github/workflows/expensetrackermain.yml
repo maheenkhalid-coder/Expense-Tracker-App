@@ -33,7 +33,7 @@ jobs:
         run: yarn build
         
       - name: installing surge
-        run: npm install -g surge 
+        run: npm install -g surge
         
       - name: deploying on surge
         run: surge ./build http://pink-yarn.surge.sh/ --token ${{ secrets.SURGE_TOKEN }} 
