@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: ExpenseTrackerApp
+name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -33,7 +33,7 @@ jobs:
         run: yarn build
         
       - name: installing surge
-        run: npm install -g surge
+        run: npm install -g surge 
         
       - name: deploying on surge
         run: surge ./build http://pink-yarn.surge.sh/ --token ${{ secrets.SURGE_TOKEN }} 
